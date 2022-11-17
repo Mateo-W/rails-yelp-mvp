@@ -1,0 +1,16 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Restaurants</h1>
+
+  <%= render 'restaurants/list', restaurants: @restaurants %>
+  <%= link_to "New restaurant", new_restaurant_path %>
+</div>
+
+<%= simple_form_for(restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :review %>
+  <%= f.submit %>
+<% end %>
